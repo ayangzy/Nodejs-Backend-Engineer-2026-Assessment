@@ -27,7 +27,7 @@ All endpoints are available at the root URL (no versioning prefixes):
    npm install
    ```
 2. Create a `.env` file and configure your `MONGODB_URI`.
-3. **CRITICAL:** You must also add the following Validator environment variables to your `.env` (and your production host's environment variables) for validation errors to format correctly according to the project specifications:
+3. **CRITICAL:** You must also add the following Validator environment variables to your `.env` for validation errors to format correctly according to the project specifications:
    ```env
    #VALIDATOR
    NO_SINGLE_ERRORS=1  
