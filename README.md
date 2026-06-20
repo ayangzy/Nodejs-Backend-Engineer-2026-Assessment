@@ -9,6 +9,10 @@ This project was built as part of the backend engineer technical assessment.
 - **Slug Generation**: Unique alphanumeric identifiers generated dynamically with fallback collision handling.
 - **Robust Validation**: Enforces strict payload validation and standardized API error formatting.
 
+## Live Deployment
+The API is currently deployed and accessible at:
+`https://nodejs-backend-engineer-2026-assessment.onrender.com`
+
 ## API Endpoints
 All endpoints are available at the root URL (no versioning prefixes):
 
@@ -23,7 +27,13 @@ All endpoints are available at the root URL (no versioning prefixes):
    npm install
    ```
 2. Create a `.env` file and configure your `MONGODB_URI`.
-3. Start the development server:
+3. **CRITICAL:** You must also add the following Validator environment variables to your `.env` (and your production host's environment variables) for validation errors to format correctly according to the project specifications:
+   ```env
+   #VALIDATOR
+   NO_SINGLE_ERRORS=1  
+   TOP_LEVEL_ERROR_MESSAGE="Validation failed."
+   ```
+4. Start the development server:
    ```bash
    npm run dev
    ```
